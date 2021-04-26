@@ -1,5 +1,7 @@
-const main = () => {
-  console.log("ここにロジックを記述");
+import fetchTodo from "./fetchTodo.js"
+
+const main = async () => {
+  const todoList = await fetchTodo();
 };
 
 main();
