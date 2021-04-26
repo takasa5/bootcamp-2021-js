@@ -1,9 +1,9 @@
-const api = "http://localhost:3000";
+import api from "./util.js"
 
 async function fetchTodo() {
     try {
         const resp = await fetch(api + "/todo", {
-        method: "GET"
+            method: "GET"
         });
         const body = await resp.json();
         return body["todoList"];
