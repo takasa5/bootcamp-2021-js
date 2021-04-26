@@ -8,6 +8,7 @@ const main = async () => {
   // todo の初期化
   todoList = (await getAPI("/todo"))["todoList"];
   reloadListView(todoList);
+
   // todo を追加する
   document.getElementById("add-todo-button").onclick = async () => {
     const todoData = await postAPI("/todo", {

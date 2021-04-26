@@ -29,4 +29,21 @@ async function postAPI(path, data = {}) {
     }
 }
 
-export {getAPI, postAPI};
+async function patchAPI(path, data = {}) {
+    try {
+        const resp = await fetch(url + path, {
+            method: "PATCH",
+            body: JSON.stringify(data),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+        return await resp.json();
+    } catch (err) {
+        // TODO: error handling
+        console.log(err);
+    }
+}
+
+export {getAPI, postAPI, patchAPI};

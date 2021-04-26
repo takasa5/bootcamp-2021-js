@@ -13,7 +13,7 @@ function todoTemplate({id, name, done}) {
             <span class="todo-toggle__checkmark"></span>
         </label>
         <div class="todo-name">${name}</div>
-        <div data-todo-id="1" class="todo-remove-button">x</div>
+        <div data-todo-id="${id}" class="todo-remove-button">x</div>
     </li>
     `;
     tmpElm.innerHTML = template;
