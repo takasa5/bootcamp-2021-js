@@ -26,6 +26,7 @@ function reloadListView(todoList) {
                 name: todo["name"],
                 done: !ck.checked
             });
+            // TODO: 下部の数字を更新
         }
     }
 

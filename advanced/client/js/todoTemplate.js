@@ -1,6 +1,6 @@
 function todoTemplate({id, name, done}) {
     const tmpElm = document.createElement("div");
-    const doneString = done ? `value="checked"` : "";
+    const doneString = done ? `checked="checked"` : "";
     const template = `
     <li class="todo-item">
         <label class="todo-toggle__container">
