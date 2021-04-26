@@ -1,4 +1,4 @@
-import { addTodo } from "../js/addTodo";
+import addTodo from "../js/addTodo";
 
 describe('todoの追加', () => {
     let todoList;
