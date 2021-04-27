@@ -2,7 +2,7 @@ const url = "http://localhost:3000";
 async function getAPI(path) {
     try {
         const resp = await fetch(url + path, {
-            method: "GET"
+            method: "GET",
         });
         return await resp.json();
     }
@@ -16,9 +16,9 @@ async function postAPI(path, data) {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
         });
         return await resp.json();
     }
@@ -32,9 +32,9 @@ async function patchAPI(path, data) {
             method: "PATCH",
             body: JSON.stringify(data),
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
         });
         return await resp.json();
     }

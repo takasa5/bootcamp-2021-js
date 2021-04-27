@@ -12,7 +12,7 @@ const main = async () => {
         addBtn.onclick = async () => {
             const name = document.getElementById("name");
             const todoData = await postAPI("/todo", {
-                "name": name.value
+                name: name.value,
             });
             todoList = addTodo(todoList, todoData);
             reloadListView(todoList);

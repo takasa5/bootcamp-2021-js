@@ -17,7 +17,6 @@ function reloadListView(todoList) {
         if (todo["done"]) {
             checkedCounter = checkedCounter + 1;
         }
-        ;
         const tmpl = todoTemplate(todo);
         ul.appendChild(tmpl);
         // イベントリスナーを追加
@@ -26,7 +25,7 @@ function reloadListView(todoList) {
         ckBtn.onclick = async () => {
             await patchAPI(`/todo/${todo["id"]}`, {
                 name: todo["name"],
-                done: !ck.checked
+                done: !ck.checked,
             });
             // TODO: 下部の数字を更新
         };
