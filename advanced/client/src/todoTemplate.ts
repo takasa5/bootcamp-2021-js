@@ -1,4 +1,8 @@
-function todoTemplate(args) {
+function todoTemplate(args: {
+    id: number,
+    name: string,
+    done: boolean
+}): Element {
     const tmpElm = document.createElement("div");
     const doneString = args.done ? `checked="checked"` : "";
     const template = `
@@ -17,6 +21,8 @@ function todoTemplate(args) {
     </li>
     `;
     tmpElm.innerHTML = template;
-    return tmpElm.firstElementChild;
+
+    return tmpElm.firstElementChild!;
 }
+
 export default todoTemplate;
