@@ -3,5 +3,4 @@ function addTodo(todoList, todo) {
     newList.push(todo);
     return newList;
 }
-
 export default addTodo;
